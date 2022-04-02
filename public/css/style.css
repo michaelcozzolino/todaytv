@@ -1,0 +1,314 @@
+/*** logo ****/
+.logo {
+    background-position: center top;
+    margin: auto;
+}
+
+@media only screen and (min-width: 576px) {
+  .logo {
+	   background-image: url(/images/logobig.png);
+	   width: 468px;
+  height: 200px;
+
+
+  }
+}
+
+@media only screen and (max-width: 576px) {
+    .logo {
+        background-image: url(/images/logosmall.png);
+        width: 253px;
+        height: 116px;
+
+
+    }
+}
+
+
+
+.center-tv-logo, .poster{
+    display: block;
+    margin: auto;
+    max-width: 185px;
+}
+
+.channel-icon{
+    /*width: 120px;*/
+    height: 58px;
+    display: block;
+    margin: auto;
+
+}
+/**channels**/
+.no-svg.mediaset-20{ background: url(/images/channel-logos/mediaset20.png) no-repeat; }
+.svg.mediaset-20{ background: url(/images/channel-logos/mediaset20.svg) no-repeat top center;}
+.no-svg.baby-tv{ background: url(/images/channel-logos/babytv.png) no-repeat; }
+.svg.baby-tv{ background: url(/images/channel-logos/babytv.svg) no-repeat top center;}
+.no-svg.blaze{ background: url(/images/channel-logos/blaze.png) no-repeat; }
+.svg.blaze{ background: url(/images/channel-logos/blaze.svg) no-repeat top center;}
+.no-svg.boing{ background: url(/images/channel-logos/boing.png) no-repeat; }
+.svg.boing{ background: url(/images/channel-logos/boing.svg) no-repeat top center;}
+.no-svg.boomerang{ background: url(/images/channel-logos/boomerang.png) no-repeat; }
+.svg.boomerang{ background: url(/images/channel-logos/boomerang.svg) no-repeat top center;}
+.no-svg.canale-5{ background: url(/images/channel-logos/canale5.png) no-repeat; }
+.svg.canale-5{ background: url(/images/channel-logos/canale5.svg) no-repeat top center;}
+.no-svg.cartoonnetwork{ background: url(/images/channel-logos/cartoonnetwork.png) no-repeat; }
+.svg.cartoonnetwork{ background: url(/images/channel-logos/cartoonnetwork.svg) no-repeat top center;}
+.no-svg.cartoonito{ background: url(/images/channel-logos/cartoonito.png) no-repeat; }
+.svg.cartoonito{ background: url(/images/channel-logos/cartoonito.svg) no-repeat top center;}
+.no-svg.classica-hd{ background: url(/images/channel-logos/classica.png) no-repeat; }
+.svg.classica-hd{ background: url(/images/channel-logos/classica.svg) no-repeat top center;}
+.no-svg.comedy-central{ background: url(/images/channel-logos/comedycentral.png) no-repeat; }
+.svg.comedy-central{ background: url(/images/channel-logos/comedycentral.svg) no-repeat top center;}
+.no-svg.crime-investigation{ background: url(/images/channel-logos/crimeinvestigation.png) no-repeat; }
+.svg.crime-investigation{ background: url(/images/channel-logos/crimeinvestigation.svg) no-repeat top center;}
+.no-svg.dea-kids{ background: url(/images/channel-logos/deakids.png) no-repeat; }
+.svg.dea-kids{ background: url(/images/channel-logos/deakids.svg) no-repeat top center;}
+.no-svg.discovery-channel{ background: url(/images/channel-logos/discoverychannel.png) no-repeat; }
+.svg.discovery-channel{ background: url(/images/channel-logos/discoverychannel.svg) no-repeat top center;}
+.no-svg.discovery-science{ background: url(/images/channel-logos/discoveryscience.png) no-repeat; }
+.svg.discovery-science{ background: url(/images/channel-logos/discoveryscience.svg) no-repeat top center;}
+.no-svg.focus{ background: url(/images/channel-logos/focus.png) no-repeat; }
+.svg.focus{ background: url(/images/channel-logos/focus.svg) no-repeat top center;}
+.no-svg.fox{ background: url(/images/channel-logos/fox.png) no-repeat; }
+.svg.fox{ background: url(/images/channel-logos/fox.svg) no-repeat top center;}
+.no-svg.fox-crime{ background: url(/images/channel-logos/foxcrime.png) no-repeat; }
+.svg.fox-crime{ background: url(/images/channel-logos/foxcrime.svg) no-repeat top center;}
+.no-svg.gambero-rosso{ background: url(/images/channel-logos/gamberorosso.png) no-repeat; }
+.svg.gambero-rosso{ background: url(/images/channel-logos/gamberorosso.svg) no-repeat top center;}
+.no-svg.history-channel{ background: url(/images/channel-logos/historychannel.png) no-repeat; }
+.svg.history-channel{ background: url(/images/channel-logos/historychannel.svg) no-repeat top center;}
+.no-svg.iris{ background: url(/images/channel-logos/iris.png) no-repeat; }
+.svg.iris{ background: url(/images/channel-logos/iris.svg) no-repeat top center;}
+.no-svg.italia-1{ background: url(/images/channel-logos/italia1.png) no-repeat; }
+.svg.italia-1{ background: url(/images/channel-logos/italia1.svg) no-repeat top center;}
+.no-svg.italia-2{ background: url(/images/channel-logos/italia2.png) no-repeat; }
+.svg.italia-2{ background: url(/images/channel-logos/italia2.svg) no-repeat top center;}
+.no-svg.la-5{ background: url(/images/channel-logos/la5.png) no-repeat; }
+.svg.la-5{ background: url(/images/channel-logos/la5.svg) no-repeat top center;}
+.no-svg.laf{ background: url(/images/channel-logos/laeffe.png) no-repeat; }
+.svg.laf{ background: url(/images/channel-logos/laeffe.svg) no-repeat top center;}
+.no-svg.mediaset-extra{ background: url(/images/channel-logos/mediasetextra.png) no-repeat; }
+.svg.mediaset-extra{ background: url(/images/channel-logos/mediasetextra.svg) no-repeat top center;}
+.no-svg.national-geographic{ background: url(/images/channel-logos/nationalgeographic.png) no-repeat; }
+.svg.national-geographic{ background: url(/images/channel-logos/nationalgeographic.svg) no-repeat top center;}
+.no-svg.national-geographic-wild{ background: url(/images/channel-logos/nationalgeographicwild.png) no-repeat; }
+.svg.national-geographic-wild{ background: url(/images/channel-logos/nationalgeographicwild.svg) no-repeat top center;}
+.no-svg.nick-junior{ background: url(/images/channel-logos/nickjunior.png) no-repeat; }
+.svg.nick-junior{ background: url(/images/channel-logos/nickjunior.svg) no-repeat top center;}
+.no-svg.nickelodeon{ background: url(/images/channel-logos/nickelodeon.png) no-repeat; }
+.svg.nickelodeon{ background: url(/images/channel-logos/nickelodeon.svg) no-repeat top center;}
+.no-svg.nove{ background: url(/images/channel-logos/nove.png) no-repeat; }
+.svg.nove{ background: url(/images/channel-logos/nove.svg) no-repeat top center;}
+.no-svg.premium-action{ background: url(/images/channel-logos/premiumaction.png) no-repeat; }
+.svg.premium-action{ background: url(/images/channel-logos/premiumaction.svg) no-repeat top center;}
+.no-svg.premium-crime{ background: url(/images/channel-logos/premiumcrime.png) no-repeat; }
+.svg.premium-crime{ background: url(/images/channel-logos/premiumcrime.svg) no-repeat top center;}
+.no-svg.premium-stories{ background: url(/images/channel-logos/premiumstories.png) no-repeat; }
+.svg.premium-stories{ background: url(/images/channel-logos/premiumstories.svg) no-repeat top center;}
+.no-svg.rai-1{ background: url(/images/channel-logos/rai1.png) no-repeat; }
+.svg.rai-1{ background: url(/images/channel-logos/rai1.svg) no-repeat top center;}
+.no-svg.rai-2{ background: url(/images/channel-logos/rai2.png) no-repeat; }
+.svg.rai-2{ background: url(/images/channel-logos/rai2.svg) no-repeat top center;}
+.no-svg.rai-3{ background: url(/images/channel-logos/rai3.png) no-repeat; }
+.svg.rai-3{ background: url(/images/channel-logos/rai3.svg) no-repeat top center;}
+.no-svg.rai-4{ background: url(/images/channel-logos/rai4.png) no-repeat; }
+.svg.rai-4{ background: url(/images/channel-logos/rai4.svg) no-repeat top center;}
+.no-svg.rai-5{ background: url(/images/channel-logos/rai5.png) no-repeat; }
+.svg.rai-5{ background: url(/images/channel-logos/rai5.svg) no-repeat top center;}
+.no-svg.rai-gulp{ background: url(/images/channel-logos/raigulp.png) no-repeat; }
+.svg.rai-gulp{ background: url(/images/channel-logos/raigulp.svg) no-repeat top center;}
+.no-svg.rai-movie{ background: url(/images/channel-logos/raimovie.png) no-repeat; }
+.svg.rai-movie{ background: url(/images/channel-logos/raimovie.svg) no-repeat top center;}
+.no-svg.rai-news-24{ background: url(/images/channel-logos/rainews24.png) no-repeat; }
+.svg.rai-news-24{ background: url(/images/channel-logos/rainews24.svg) no-repeat top center;}
+.no-svg.rai-premium{ background: url(/images/channel-logos/raipremium.png) no-repeat; }
+.svg.rai-premium{ background: url(/images/channel-logos/raipremium.svg) no-repeat top center;}
+.no-svg.rai-storia{ background: url(/images/channel-logos/raistoria.png) no-repeat; }
+.svg.rai-storia{ background: url(/images/channel-logos/raistoria.svg) no-repeat top center;}
+.no-svg.rai-yoyo{ background: url(/images/channel-logos/raiyoyo.png) no-repeat; }
+.svg.rai-yoyo{ background: url(/images/channel-logos/raiyoyo.svg) no-repeat top center;}
+.no-svg.rete-4{ background: url(/images/channel-logos/rete4.png) no-repeat; }
+.svg.rete-4{ background: url(/images/channel-logos/rete4.svg) no-repeat top center;}
+.no-svg.sky-arte{ background: url(/images/channel-logos/skyarte.png) no-repeat; }
+.svg.sky-arte{ background: url(/images/channel-logos/skyarte.svg) no-repeat top center;}
+.no-svg.sky-atlantic{ background: url(/images/channel-logos/skyatlantic.png) no-repeat; }
+.svg.sky-atlantic{ background: url(/images/channel-logos/skyatlantic.svg) no-repeat top center;}
+.no-svg.sky-cinema-action{ background: url(/images/channel-logos/skycinemaaction.png) no-repeat; }
+.svg.sky-cinema-action{ background: url(/images/channel-logos/skycinemaaction.svg) no-repeat top center;}
+.no-svg.sky-cinema-collection{ background: url(/images/channel-logos/skycinemacollection.png) no-repeat; }
+.svg.sky-cinema-collection{ background: url(/images/channel-logos/skycinemacollection.svg) no-repeat top center;}
+.no-svg.sky-cinema-comedy{ background: url(/images/channel-logos/skycinemacomedy.png) no-repeat; }
+.svg.sky-cinema-comedy{ background: url(/images/channel-logos/skycinemacomedy.svg) no-repeat top center;}
+.no-svg.sky-cinema-drama{ background: url(/images/channel-logos/skycinemadrama.png) no-repeat; }
+.svg.sky-cinema-drama{ background: url(/images/channel-logos/skycinemadrama.svg) no-repeat top center;}
+.no-svg.sky-cinema-due{ background: url(/images/channel-logos/skycinemadue.png) no-repeat; }
+.svg.sky-cinema-due{ background: url(/images/channel-logos/skycinemadue.svg) no-repeat top center;}
+.no-svg.sky-cinema-family{ background: url(/images/channel-logos/skycinemafamily.png) no-repeat; }
+.svg.sky-cinema-family{ background: url(/images/channel-logos/skycinemafamily.svg) no-repeat top center;}
+.no-svg.sky-cinema-romance{ background: url(/images/channel-logos/skycinemaromance.png) no-repeat; }
+.svg.sky-cinema-romance{ background: url(/images/channel-logos/skycinemaromance.svg) no-repeat top center;}
+.no-svg.sky-cinema-suspense{ background: url(/images/channel-logos/skycinemasuspense.png) no-repeat; }
+.svg.sky-cinema-suspense{ background: url(/images/channel-logos/skycinemasuspense.svg) no-repeat top center;}
+.no-svg.sky-cinema-uno{ background: url(/images/channel-logos/skycinemauno.png) no-repeat; }
+.svg.sky-cinema-uno{ background: url(/images/channel-logos/skycinemauno.svg) no-repeat top center;}
+.no-svg.sky-sport-24{ background: url(/images/channel-logos/skysport24.png) no-repeat; }
+.svg.sky-sport-24{ background: url(/images/channel-logos/skysport24.svg) no-repeat top center;}
+.no-svg.sky-sport-arena{ background: url(/images/channel-logos/skysportarena.png) no-repeat; }
+.svg.sky-sport-arena{ background: url(/images/channel-logos/skysportarena.svg) no-repeat top center;}
+.no-svg.sky-sport-f1{ background: url(/images/channel-logos/skysportf1.png) no-repeat; }
+.svg.sky-sport-f1{ background: url(/images/channel-logos/skysportf1.svg) no-repeat top center;}
+.no-svg.sky-sport-football{ background: url(/images/channel-logos/skysportfootball.png) no-repeat; }
+.svg.sky-sport-football{ background: url(/images/channel-logos/skysportfootball.svg) no-repeat top center;}
+.no-svg.sky-sport-moto-gp{ background: url(/images/channel-logos/skysportmotogp.png) no-repeat; }
+.svg.sky-sport-moto-gp{ background: url(/images/channel-logos/skysportmotogp.svg) no-repeat top center;}
+.no-svg.sky-sport-nba{ background: url(/images/channel-logos/skysportnba.png) no-repeat; }
+.svg.sky-sport-nba{ background: url(/images/channel-logos/skysportnba.svg) no-repeat top center;}
+.no-svg.sky-sport-serie-a{ background: url(/images/channel-logos/skysportseriea.png) no-repeat; }
+.svg.sky-sport-serie-a{ background: url(/images/channel-logos/skysportseriea.svg) no-repeat top center;}
+.no-svg.sky-sport-uno{ background: url(/images/channel-logos/skysportuno.png) no-repeat; }
+.svg.sky-sport-uno{ background: url(/images/channel-logos/skysportuno.svg) no-repeat top center;}
+.no-svg.sky-uno{ background: url(/images/channel-logos/skyuno.png) no-repeat; }
+.svg.sky-uno{ background: url(/images/channel-logos/skyuno.svg) no-repeat top center;}
+.no-svg.top-crime{ background: url(/images/channel-logos/topcrime.png) no-repeat; }
+.svg.top-crime{ background: url(/images/channel-logos/topcrime.svg) no-repeat top center;}
+
+/***site style****/
+
+table td{
+    font-weight: 400 !important;
+}
+
+
+
+.tab-color, .progress{
+    background-color: #eeeeee !important;
+
+}
+
+a:hover, .nav-item.active>a, .nav-item>a.active, .text-yellow-darken-3, #carousel-left-arrow:hover,#carousel-right-arrow:hover ,
+#cast-carousel-actor-name,#cast-carousel-character-name,.navbar-brand{
+    color: #f9a825 !important;
+
+
+}
+
+
+
+
+.search-button-nav {
+    border: 1.5px solid #fff !important;
+    background-color: transparent !important;
+    color: #fff !important;
+}
+.search-button-nav:hover{
+    color: #f9a825 !important;
+    border-color: #f9a825 !important;
+}
+
+.nav-item.active>a, .nav-item>a.active, .dropdown-item.active{
+    border: 1.5px solid #f9a825 !important;
+}
+
+.nav-item.active>a, .sky-menu>a.dropdown-item.active{
+    background-color: rgba(0,0,0,.2) !important;
+    border-radius: 0.25rem !important;
+
+}
+
+.sky-menu{
+    border: 1.5px solid #f9a825 !important;
+    border-radius: 0.25rem !important;
+
+
+
+}
+.sky-menu>a.dropdown-item{
+    color: #fff !important;
+}
+
+.dropdown-item{
+    font-weight: 300 !important;
+}
+
+
+
+.dropdown-item.active, .dropdown-item:active{
+    background-color: #2e2e2e !important;
+    color: #f9a825 !important;
+}
+
+
+.program-info th{
+    font-weight: 300;
+    font-size: 16px;
+    background-color: #2e2e2e;
+    color: #f9a825 !important;
+
+}
+
+/* start css about partialChannelsLists and channelsLists */
+/* programs is the tbody of the tables that lists programs*/
+/*.programs:hover tr:last-child td:last-child {
+    border-bottom-right-radius: 0.25rem;
+
+}
+.programs:hover tr:last-child td:first-child {
+    border-bottom-left-radius: 0.25rem;
+
+}*/
+
+/* startTime-col is the column where we have the startTime of a program*/
+.startTime-col{
+    width: 15% !important;
+    vertical-align: middle !important;
+    text-align: center !important;
+    border-right: 1.5px solid #eceff1 !important;
+}
+
+.broadcastBy-col{
+    vertical-align: middle !important;
+    text-align: center !important;
+
+}
+
+/* program is the row in the programs table list*/
+.program:hover, .program:hover a,.program:hover td{
+    background-color: #2e2e2e;
+    color: #f9a825 !important;
+}
+
+.program:hover .progress-bar, .no-program-available, .dropdown-item:hover {
+    background-color:#f9a825 !important ;
+}
+
+.program td{
+    border-top: 1.5px solid #eceff1 !important;
+}
+
+/* end css about partialChannelsLists and channelsLists */
+
+.card{
+    margin-bottom: 1rem;
+}
+
+.program-info th{
+    border-top: none ;
+    border-bottom: none;
+}
+
+
+.program-info {
+
+    /*border: 1.5px solid #2e2e2e !important;*/
+
+    text-align: center;
+
+}
+
+
+
+
+
+
+
