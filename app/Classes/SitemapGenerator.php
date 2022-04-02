@@ -43,7 +43,7 @@ class SitemapGenerator
         $tvGroups = TvGroup::getGroupedTvGroups();
 
         foreach ($tvGroups as $tvGroup) {
-            if (! is_null($tvGroup->sub_tv_groups)) {
+            if (!is_null($tvGroup->sub_tv_groups)) {
                 $sitemap->add($this->generateTvGroupsTimesUrls(explode(',', $tvGroup->slugs), $tvTimes));
             } else {
                 $sitemap->add($this->generateTvGroupsTimesUrls([$tvGroup->slugs], $tvTimes));

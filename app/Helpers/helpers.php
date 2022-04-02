@@ -3,7 +3,7 @@
 use App\Classes\ValidTvTime;
 use App\Models\TvGroup;
 
-if (! function_exists('getNavbarItems')) {
+if (!function_exists('getNavbarItems')) {
     function getNavbarItems()
     {
         return [
@@ -23,7 +23,7 @@ if (! function_exists('getNavbarItems')) {
     }
 }
 
-if (! function_exists('getTabs')) {
+if (!function_exists('getTabs')) {
     function getTabs()
     {
         $tvGroups = TvGroup::getGroupedTvGroups();
@@ -46,7 +46,7 @@ if (! function_exists('getTabs')) {
     }
 }
 
-if (! function_exists('getHeadData')) {
+if (!function_exists('getHeadData')) {
     function getHeadData(array $info)
     {
         $headData = [];
@@ -83,14 +83,14 @@ if (! function_exists('getHeadData')) {
     }
 }
 
-if (! function_exists('unslug')) {
+if (!function_exists('unslug')) {
     function unslug(string $string)
     {
         return Str::of($string)->replace('-', ' ')->value;
     }
 }
 
-if (! function_exists('deleteFile')) {
+if (!function_exists('deleteFile')) {
     function deleteFile(string $filePath)
     {
         if (file_exists($filePath)) {

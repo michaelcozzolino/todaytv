@@ -12,14 +12,14 @@ class ChannelsController extends Controller
 {
     public function show(Channel $channel)
     {
-        abort_if((bool) ! $channel->tvShows->count(), 404);
+        abort_if((bool) !$channel->tvShows->count(), 404);
 
         return view('channels.show', compact('channel'));
     }
 
     public function index(TvGroup $tvGroup, string $time)
     {
-        abort_if(! (new ValidTvTime($time))(), 404);
+        abort_if(!(new ValidTvTime($time))(), 404);
 
         $channels = Channel::getTvShowsByTime($tvGroup, $time);
 
@@ -34,7 +34,7 @@ class ChannelsController extends Controller
      */
     public function search(Request $request): Response
     {
-        abort_if(! $request->ajax(), 404);
+        abort_if(!$request->ajax(), 404);
 
         $searchQuery = $request->input('query');
 

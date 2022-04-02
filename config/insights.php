@@ -11,6 +11,7 @@ use NunoMaduro\PhpInsights\Domain\Metrics\Architecture\Classes;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\AssignmentInConditionSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\TodoSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
+use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff;
 use PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer;
 use PhpCsFixer\Fixer\Comment\NoEmptyCommentFixer;
 use SlevomatCodingStandard\Sniffs\Commenting\UselessFunctionDocCommentSniff;
@@ -98,6 +99,7 @@ return [
         AssignmentInConditionSniff::class,
         \SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff::class,
         OrderedClassElementsFixer::class,
+        SpaceAfterNotSniff::class,
     ],
 
     'config' => [

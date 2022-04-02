@@ -21,7 +21,7 @@ class SkyTvShow implements ProvidesTvShow
     {
         $coverUrl = $this->skyTvShow->icon->attributes()->src;
 
-        return ! $this->isGenericCoverUrl($coverUrl) ? $coverUrl : null;
+        return !$this->isGenericCoverUrl($coverUrl) ? $coverUrl : null;
     }
 
     public function getTitle()

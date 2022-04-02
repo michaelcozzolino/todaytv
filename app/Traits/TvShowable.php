@@ -44,7 +44,7 @@ trait TvShowable
 
     private function createTvShowDetail()
     {
-        if (! isset($this->tvShowDetail) && isset($this->apiUUID)) {
+        if (!isset($this->tvShowDetail) && isset($this->apiUUID)) {
             $this->tvShowDetail = TvShowDetail::create([
                 'api_uuid' => $this->apiUUID,
                 'title' => $this->getTitle(),
