@@ -1,6 +1,10 @@
 /node_modules
 /public/hot
 /public/storage
+/public/css/app.css
+public/fonts/
+public/js/app.js
+public/js/app.js.LICENSE.txt
 /storage/*.key
 /vendor
 .env
@@ -16,3 +20,4 @@ yarn-error.log
 .php-cs-fixer.cache
 _ide_helper.php
 _ide_helper_models.php
+

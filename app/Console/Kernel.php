@@ -22,8 +22,7 @@ class Kernel extends ConsoleKernel
                 (new TvShowsManager())();
                 (new SitemapGenerator())->generateTvShowDetails()->generateIndex();
             })
-            ->dailyAt('20:00')
-            ->runInBackground();
+            ->dailyAt('20:00');
     }
 
     /**
