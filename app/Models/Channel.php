@@ -73,6 +73,7 @@ class Channel extends Model implements Sitemapable
             ->whereHas('tvShows', function (Builder|HasMany $query) use ($time) {
                 return $query->time($time);
             })
+            ->orderBy('number')
             ->get();
     }
 
