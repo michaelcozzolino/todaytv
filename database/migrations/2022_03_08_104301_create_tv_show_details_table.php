@@ -23,8 +23,6 @@ return new class extends Migration {
 
             $table->text('genre')->nullable();
 
-            $table->string('backdrop_url', 4096)->nullable();
-
             $table->string('cover_url', 4096)->nullable();
 
             $table->text('slug');

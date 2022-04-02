@@ -21,7 +21,6 @@ class TvShowDetailFactory extends Factory
             'title' => $this->faker->word(),
             'description' => $this->faker->realText(),
             'genre' => $this->faker->word(),
-            'backdrop_url' => $this->faker->imageUrl(),
             'cover_url' => $this->faker->imageUrl(),
         ];
     }
