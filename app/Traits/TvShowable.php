@@ -65,7 +65,7 @@ trait TvShowable
 
         if (
             isset($this->tvShowDetail, $this->channel, $startingAt, $endingAt) &&
-            Carbon::rawParse($startingAt)->isCurrentDay()
+            Carbon::rawParse($startingAt)->isTomorrow()
         ) {
             $this->tvShowDetail->tvShows()->firstOrCreate([
                 'starting_at' => $startingAt,

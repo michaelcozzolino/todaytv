@@ -16,9 +16,9 @@ class SkyTvShowTest extends TestCase
     public function it_returns_the_correct_data()
     {
         // sky is UTC+2
-        $this->assertEquals(Carbon::today()->format('Y-m-d') . ' 02:00:00', $this->skyTvShow->getStartTime());
+        $this->assertEquals(Carbon::tomorrow()->format('Y-m-d') . ' 02:00:00', $this->skyTvShow->getStartTime());
 
-        $this->assertEquals(Carbon::today()->format('Y-m-d') . ' 04:00:00', $this->skyTvShow->getEndTime());
+        $this->assertEquals(Carbon::tomorrow()->format('Y-m-d') . ' 04:00:00', $this->skyTvShow->getEndTime());
 
         $this->assertEquals('uuid', $this->skyTvShow->getIdKeyName());
 

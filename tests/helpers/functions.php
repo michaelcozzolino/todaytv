@@ -39,7 +39,7 @@ function getSampleRaiTvShow()
 
 function getSampleSkyTvShow()
 {
-    $today = Carbon::today();
+    $today = Carbon::tomorrow();
 
     $start = $today->copy()->format('YmdHis');
 
