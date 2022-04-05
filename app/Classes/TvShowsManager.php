@@ -72,11 +72,11 @@ class TvShowsManager
 
     private function getProviderUrl($providerName, $channelApiId = null): ?string
     {
-        $today = Carbon::today()->format('d-m-Y');
+        $tomorrow = Carbon::tomorrow()->format('d-m-Y');
 
         $providers = [
             'sky' => 'https://iptv-org.github.io/epg/guides/it/guidatv.sky.it.epg.xml',
-            'rai' => "https://www.raiplay.it/palinsesto/app/{$channelApiId}/{$today}.json",
+            'rai' => "https://www.raiplay.it/palinsesto/app/{$channelApiId}/{$tomorrow}.json",
         ];
 
         return array_key_exists($providerName, $providers) ? $providers[$providerName] : null;

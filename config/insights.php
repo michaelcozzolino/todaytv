@@ -8,18 +8,23 @@ use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenNormalClasses;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenPrivateMethods;
 use NunoMaduro\PhpInsights\Domain\Insights\ForbiddenTraits;
 use NunoMaduro\PhpInsights\Domain\Metrics\Architecture\Classes;
+use NunoMaduro\PhpInsights\Domain\Sniffs\ForbiddenSetterSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\CodeAnalysis\AssignmentInConditionSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Commenting\TodoSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Files\LineLengthSniff;
 use PHP_CodeSniffer\Standards\Generic\Sniffs\Formatting\SpaceAfterNotSniff;
 use PhpCsFixer\Fixer\ClassNotation\OrderedClassElementsFixer;
 use PhpCsFixer\Fixer\Comment\NoEmptyCommentFixer;
+use PhpCsFixer\Fixer\Operator\NewWithBracesFixer;
+use SlevomatCodingStandard\Sniffs\Classes\ForbiddenPublicPropertySniff;
+use SlevomatCodingStandard\Sniffs\Classes\ModernClassNameReferenceSniff;
 use SlevomatCodingStandard\Sniffs\Commenting\UselessFunctionDocCommentSniff;
 use SlevomatCodingStandard\Sniffs\ControlStructures\DisallowEmptySniff;
 use SlevomatCodingStandard\Sniffs\ControlStructures\DisallowShortTernaryOperatorSniff;
 use SlevomatCodingStandard\Sniffs\Functions\FunctionLengthSniff;
 use SlevomatCodingStandard\Sniffs\Namespaces\AlphabeticallySortedUsesSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DeclareStrictTypesSniff;
+use SlevomatCodingStandard\Sniffs\TypeHints\DisallowArrayTypeHintSyntaxSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\DisallowMixedTypeHintSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\ParameterTypeHintSniff;
 use SlevomatCodingStandard\Sniffs\TypeHints\PropertyTypeHintSniff;
@@ -100,6 +105,11 @@ return [
         \SlevomatCodingStandard\Sniffs\ControlStructures\AssignmentInConditionSniff::class,
         OrderedClassElementsFixer::class,
         SpaceAfterNotSniff::class,
+        DisallowArrayTypeHintSyntaxSniff::class,
+        NewWithBracesFixer::class,
+        ModernClassNameReferenceSniff::class,
+        ForbiddenSetterSniff::class,
+        ForbiddenPublicPropertySniff::class,
     ],
 
     'config' => [
@@ -113,6 +123,15 @@ return [
         ],
         FunctionLengthSniff::class => [
             'maxLinesLength' => 50,
+        ],
+        DisallowArrayTypeHintSyntaxSniff::class => ['app/Models/*.php'],
+        \SlevomatCodingStandard\Sniffs\Commenting\DocCommentSpacingSniff::class => [
+            'linesCountBeforeFirstContent' => 0,
+            'linesCountBetweenDescriptionAndAnnotations' => 1,
+            'linesCountBetweenDifferentAnnotationsTypes' => 0,
+            'linesCountBetweenAnnotationsGroups' => 1,
+            'linesCountAfterLastContent' => 0,
+            'annotationsGroups' => [],
         ],
     ],
 
