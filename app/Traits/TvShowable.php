@@ -27,7 +27,7 @@ trait TvShowable
 
     public function getId()
     {
-        $urlBindings = explode('/', $this->getContainingIdUrl());
+        $urlBindings = explode('/', $this->getContainingIdUrl() ?? '');
 
         $idKeyNameBindIndex = array_search($this->getIdKeyName(), $urlBindings);
 
