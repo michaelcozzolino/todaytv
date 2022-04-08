@@ -19,12 +19,7 @@ class RaiTvShowTest extends TestCase
 
         $this->assertEquals('2022-03-13 02:00:00', $this->raiTvShow->getEndTime());
 
-        $this->assertEquals('info', $this->raiTvShow->getIdKeyName());
-
-        $this->assertEquals(
-            '/programmi/info/9accb31f-9b8e-4c71-8d50-0f4b8ef4f182',
-            $this->raiTvShow->getContainingIdUrl(),
-        );
+        $this->assertEquals('04bcd2b6-9c82-416e-923a-44756ad38703', $this->raiTvShow->getId());
 
         $this->assertEquals(Str::slug('Rai Movie'), $this->raiTvShow->getChannel());
 

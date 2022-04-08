@@ -39,14 +39,21 @@ class SkyTvShow implements ProvidesTvShow
         return $this->skyTvShow->category;
     }
 
-    public function getContainingIdUrl()
+    public function getId()
     {
-        return $this->getCoverUrl();
-    }
+        $urlBindings = explode('/', $this->getCoverUrl() ?? '');
 
-    public function getIdKeyName()
-    {
-        return 'uuid'; // https://guidatv.sky.it/uuid/{id}
+        $idKeyNameBindIndex = array_search('uuid', $urlBindings);
+
+        $idBindIndex = $idKeyNameBindIndex + 1;
+
+        if ($idKeyNameBindIndex !== false && array_key_exists($idBindIndex, $urlBindings)) {
+            $uuid = $urlBindings[$idBindIndex];
+
+            return \Str::isUuid($uuid) ? $uuid : $this->getCustomUUID();
+        }
+
+        return null;
     }
 
     public function getStartTime()

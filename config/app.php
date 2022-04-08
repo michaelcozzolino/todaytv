@@ -1,5 +1,6 @@
 <?php
 
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Facade;
 
 return [
@@ -77,6 +78,18 @@ return [
     */
 
     'timezone' => 'Europe/Rome',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Scraping date
+    |--------------------------------------------------------------------------
+    |
+    | The default date to start scraping tv shows data.
+    | It depends on the environment.
+    |
+    */
+
+    'scraping_date' => env('APP_ENV') === 'production' ? Carbon::tomorrow() : Carbon::today(),
 
     /*
     |--------------------------------------------------------------------------

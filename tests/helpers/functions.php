@@ -2,7 +2,6 @@
 
 use App\Classes\RaiTvShow;
 use App\Classes\SkyTvShow;
-use Carbon\Carbon;
 
 function getSampleRaiTvShow()
 {
@@ -39,11 +38,11 @@ function getSampleRaiTvShow()
 
 function getSampleSkyTvShow()
 {
-    $today = Carbon::tomorrow();
+    $date = config('app.scraping_date');
 
-    $start = $today->copy()->format('YmdHis');
+    $start = $date->copy()->format('YmdHis');
 
-    $end = $today
+    $end = $date
         ->copy()
         ->addHours(2)
         ->format('YmdHis');

@@ -7,6 +7,7 @@ use App\Traits\TvShowable;
 use Carbon\Carbon;
 use Carbon\Exceptions\InvalidFormatException;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 class RaiTvShow implements ProvidesTvShow
 {
@@ -22,14 +23,11 @@ class RaiTvShow implements ProvidesTvShow
         $this->additionalData = $this->getAdditionalData();
     }
 
-    public function getContainingIdUrl()
+    public function getId()
     {
-        return str_replace('.json', '', $this->raiTvShow->program->info_url);
-    }
+        $uuid = str_replace('ContentItem-', '', $this->raiTvShow->id);
 
-    public function getIdKeyName()
-    {
-        return 'info'; // /programmi/info/{id}
+        return Str::isUuid($uuid) ? $uuid : $this->getCustomUUID();
     }
 
     public function isAdditionalDataAvailable()

@@ -6,9 +6,7 @@ use Carbon\Carbon;
 
 interface ProvidesTvShow
 {
-    public function getContainingIdUrl();
-
-    public function getIdKeyName();
+    public function getId();
 
     public function getCoverUrl();
 

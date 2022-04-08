@@ -4,7 +4,6 @@ namespace App\Classes;
 
 use App\Models\Channel;
 use App\Models\TvShow;
-use Carbon\Carbon;
 use GuzzleHttp\Exception\ClientException;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Http;
@@ -16,6 +15,7 @@ class TvShowsManager
 
     public function __invoke()
     {
+        //only used for rai
         $raiAPIChannels = Channel::useAPI()->get();
 
         /** TODO: too many providers as parameters, i'm sure i can improve it */
@@ -26,15 +26,7 @@ class TvShowsManager
             );
         }
 
-        $skyAPIChannels = Channel::useAPI(self::SKY_PROVIDER)->get();
-
-        foreach ($skyAPIChannels as $skyAPIChannel) {
-            echo "{$skyAPIChannel}\n";
-            $this->store(
-                $this->scrape($this->getProviderUrl(self::SKY_PROVIDER, $skyAPIChannel->api_id)),
-                self::SKY_PROVIDER,
-            );
-        }
+        $this->store($this->scrape($this->getProviderUrl(self::SKY_PROVIDER)), self::SKY_PROVIDER);
     }
 
     private function destroyOld()
@@ -72,7 +64,7 @@ class TvShowsManager
 
     private function getProviderUrl($providerName, $channelApiId = null): ?string
     {
-        $tomorrow = Carbon::tomorrow()->format('d-m-Y');
+        $tomorrow = config('app.scraping_date')->format('d-m-Y');
 
         $providers = [
             'sky' => 'https://iptv-org.github.io/epg/guides/it/guidatv.sky.it.epg.xml',

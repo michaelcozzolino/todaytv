@@ -5,6 +5,7 @@ namespace App\Traits;
 use App\Models\Channel;
 use App\Models\TvShowDetail;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 trait TvShowable
 {
@@ -23,23 +24,6 @@ trait TvShowable
     public function getDuration(): int
     {
         return Carbon::rawParse($this->getEndTime())->diffInMinutes($this->getStartTime());
-    }
-
-    public function getId()
-    {
-        $urlBindings = explode('/', $this->getContainingIdUrl() ?? '');
-
-        $idKeyNameBindIndex = array_search($this->getIdKeyName(), $urlBindings);
-
-        $idBindIndex = $idKeyNameBindIndex + 1;
-
-        if ($idKeyNameBindIndex !== false && array_key_exists($idBindIndex, $urlBindings)) {
-            $uuid = $urlBindings[$idBindIndex];
-
-            return \Str::isUuid($uuid) ? $uuid : $this->getCustomUUID();
-        }
-
-        return null;
     }
 
     private function createTvShowDetail()
@@ -65,13 +49,14 @@ trait TvShowable
 
         if (
             isset($this->tvShowDetail, $this->channel, $startingAt, $endingAt) &&
-            Carbon::rawParse($startingAt)->isTomorrow()
+            Carbon::rawParse($startingAt)->isSameDay(config('app.scraping_date'))
         ) {
-            $this->tvShowDetail->tvShows()->firstOrCreate([
+            DB::table('tv_shows')->updateOrInsert([
                 'starting_at' => $startingAt,
                 'ending_at' => $endingAt,
                 'duration' => $this->getDuration(),
                 'channel_id' => $this->channel->id,
+                'tv_show_detail_id' => $this->tvShowDetail->id,
             ]);
         }
     }

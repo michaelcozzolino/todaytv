@@ -2,7 +2,6 @@
 
 namespace Tests\Feature\Classes;
 
-use Carbon\Carbon;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -15,17 +14,13 @@ class SkyTvShowTest extends TestCase
      */
     public function it_returns_the_correct_data()
     {
+        $date = config('app.scraping_date');
         // sky is UTC+2
-        $this->assertEquals(Carbon::tomorrow()->format('Y-m-d') . ' 02:00:00', $this->skyTvShow->getStartTime());
+        $this->assertEquals($date->format('Y-m-d') . ' 02:00:00', $this->skyTvShow->getStartTime());
 
-        $this->assertEquals(Carbon::tomorrow()->format('Y-m-d') . ' 04:00:00', $this->skyTvShow->getEndTime());
+        $this->assertEquals($date->format('Y-m-d') . ' 04:00:00', $this->skyTvShow->getEndTime());
 
-        $this->assertEquals('uuid', $this->skyTvShow->getIdKeyName());
-
-        $this->assertEquals(
-            'https://guidatv.sky.it/uuid/f325e992-aa0a-4c85-9625-85cbdcc547ac/cover?md5ChecksumParam=b01b7edcbb59f3dedebec43395d34c32',
-            $this->skyTvShow->getContainingIdUrl(),
-        );
+        $this->assertEquals('f325e992-aa0a-4c85-9625-85cbdcc547ac', $this->skyTvShow->getId());
 
         $this->assertEquals(
             'https://guidatv.sky.it/uuid/f325e992-aa0a-4c85-9625-85cbdcc547ac/cover?md5ChecksumParam=b01b7edcbb59f3dedebec43395d34c32',
